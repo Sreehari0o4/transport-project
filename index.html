@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>State Transport Login</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        overflow: hidden; /* Hide scroll bars */
+    }
+    #video-background {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1; /* Make sure the video stays in the background */
+    }
+    .container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-width: 800px; /* Increased width */
+        padding: 20px;
+        background-color: rgba(255, 255, 255, 0.8); /* Reduced opacity */
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        overflow: hidden;
+    }
+    h1, h2 {
+        margin-bottom: 20px; /* Reduced margin */
+        color: #333;
+    }
+    h1 {
+        text-transform: uppercase; /* Capitalize text */
+        font-family: Times New Roman, serif; /* Changed font */
+    }
+    .login-choice {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px; /* Reduced margain */
+    }
+    .login-choice a {
+        text-decoration: none;
+        color: #fff;
+        padding: 20px;
+        border-radius: 10px; /* More rounded corners */
+        transition: transform 0.3s ease, opacity 0.3s ease;
+        flex: 1;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        display: flex; /* Added to align text and image vertically */
+        flex-direction: column; /* Added to align text and image vertically */
+        align-items: center; /* Added to align text and image vertically */
+        height: 60px;
+    }
+    .login-choice a:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    }
+    .login-choice a::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(45deg, rgba(255,255,255,0) 0%, rgba(0,0,0,0.7) 100%);
+        transition: opacity 0.3s ease;
+        opacity: 0;
+    }
+    .login-choice a:hover::after {
+        opacity: 1;
+    }
+    .logo {
+        display: block;
+        margin: 0 auto;
+        width: 150px;
+        height: auto;
+        margin-bottom: 20px;
+        filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.2));
+    }
+    .icon {
+        width: 50px;
+        height: auto;
+        margin-bottom: 10px;
+    }
+</style>
+</head>
+<body>
+<video autoplay muted loop id="video-background">
+    <source src="VN20240410_170434.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
+
+<div class="container">
+    <img src="logoo.png" alt="Company Logo" class="logo">
+    <h1>STATE TRANSPORT CORPORATION</h1> <!-- Capitalized text -->
+    <h2>Choose Account Type</h2>
+    <div class="login-choice">
+        <a href="administrator.html" style="background-color: #4CAF50;">
+            <img src="admin.jpg" alt="Administrator Icon" class="icon">
+            Administrator
+        </a>
+        <a href="mechanic.html" style="background-color: #FFC107;">
+            <img src="mech.jpg" alt="Mechanic Icon" class="icon">
+            Mechanic
+        </a>
+        <a href="manufacturer.html" style="background-color: #2196F3;">
+            <img src="manufact.jpg" alt="Manufacturer Icon" class="icon">
+            Manufacturer
+        </a>
+    </div>
+</div>
+</body>
+</html>
